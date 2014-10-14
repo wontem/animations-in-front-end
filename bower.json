@@ -6,9 +6,6 @@
     "Kiryl Dziamura <Kiryl_Dziamura@epam.com>"
   ],
   "description": "slides for courses",
-  "moduleType": [
-    "amd"
-  ],
   "license": "MIT",
   "ignore": [
     "**/.*",
@@ -16,5 +13,8 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "reveal.js": "~2.6.2"
+  }
 }
