@@ -1,0 +1,20 @@
+{
+  "name": "animations-in-front-end",
+  "version": "0.0.0",
+  "homepage": "https://github.com/wontem/animations-in-front-end",
+  "authors": [
+    "Kiryl Dziamura <Kiryl_Dziamura@epam.com>"
+  ],
+  "description": "slides for courses",
+  "moduleType": [
+    "amd"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
