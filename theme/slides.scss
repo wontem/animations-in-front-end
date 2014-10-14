@@ -1,0 +1,31 @@
+// Default mixins and settings -----------------
+@import "../bower_components/reveal.js/css/theme/template/mixins";
+@import "../bower_components/reveal.js/css/theme/template/settings";
+// ---------------------------------------------
+
+
+// Include theme-specific fonts
+@import url(https://fonts.googleapis.com/css?family=Roboto:700);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic,700italic);
+
+
+// Override theme settings (see ../template/settings.scss)
+$backgroundColor: #111;
+
+$mainFont: 'Open Sans', sans-serif;
+$linkColor: #8dd792;
+$linkColorHover: lighten( $linkColor, 20% );
+$headingFont: 'Roboto', Impact, sans-serif;
+$headingTextShadow: none;
+$headingLetterSpacing: 0.02em;
+$headingTextTransform: uppercase;
+$selectionBackgroundColor: #FF5E99;
+$mainFontSize: 30px;
+
+.reveal h1 {
+    font-size: 1.75em;
+}
+
+// Theme template ------------------------------
+@import "../bower_components/reveal.js/css/theme/template/theme";
+// ---------------------------------------------
