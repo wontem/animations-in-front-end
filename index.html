@@ -38,18 +38,188 @@
 	<body>
 
 		<div class="reveal">
-
-			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
-				<section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+				<section class="center">
 					<h1>Animations</h1>
 					<p>
 						<a href="mailto:2wontem@gmail.com">Kirill Demura</a>
 					</p>
 				</section>
 
-			</div>
 
+
+
+				<section class="center">
+					<div class="cols">
+						<div>
+							<h2>CSS</h2>
+							<ul>
+								<li>transition</li>
+								<li>keyframes</li>
+							</ul>
+						</div>
+						<div>
+							<h2>JS</h2>
+							<ul>
+								<li>requestAnimationFrame</li>
+								<li>transitionend event</li>
+								<!-- <li>animate</li> -->
+							</ul>
+						</div>
+						<!-- <div>
+							<h2>SVG</h2>
+							<ul>
+								<li>SMIL</li>
+							</ul>
+						</div> -->
+					</div>
+				</section>
+
+
+				<section>
+					<section>
+						<h2>Transition</h2>
+						<a href="http://caniuse.com/#feat=css-transitions">Caniuse</a>
+						<pre><code class="css" data-trim>
+transition: shorthand for
+
+transition-property: none | all | IDENT
+transition-duration: &lt;time&gt;
+transition-timing-function: &lt;timingfunction&gt;
+transition-delay: &lt;time&gt;
+					</code></pre>
+					</section>
+
+
+					<section>
+						<h2>Timing Functions</h2>
+					</section>
+
+					<section data-background="#2f4f4f">
+						<h2>Timing Functions</h2>
+						<p>Steps</p>
+					</section>
+
+					<section>
+						<h2>Timing Functions</h2>
+						<p>
+							<a href="http://wontem.pe.hu/bezier/">Explaining</a><br>
+							<a href="http://cubic-bezier.com/">Cubic bezier</a><br>
+							<a href="http://www.smashingmagazine.com/2014/04/15/understanding-css-timing-functions/">CSS Timing functions</a><br>
+							<a href="http://www.robertpenner.com/easing/">Easing functions</a>
+						</p>
+					</section>
+
+					<section>
+						<h2>Delay</h2>
+						<p class="align-left">Negative delay starts the animation at position corresponding absolute value of delay</p>
+					</section>
+				</section>
+
+
+
+				<section>
+					<section>
+						<h2>Animation</h2>
+						<a href="http://caniuse.com/#feat=css-animation">Caniuse</a>
+						<pre><code class="css" data-trim>
+animation: shorthand for
+
+animation-name: none | IDENT
+animation-duration: &lt;time&gt;
+animation-timing-function: &lt;timingfunction&gt;
+animation-delay: &lt;time&gt;
+animation-iteration-count: &lt;number&gt; | infinite
+animation-direction: normal | alternate | reverse | alternate-reverse
+animation-fill-mode: none | forwards | backwards | both
+animation-play-state: running | paused
+					</code></pre>
+					</section>
+
+					<section>
+						<h2>@keyframes</h2>
+						<p class="align-left">@keyframes &lt;name&gt; rule defines scenario of animation</p>
+					</section>
+
+					<section>
+						<h2>Iteration count</h2>
+						<p class="align-left">Number of iterations. Infinite or float (for example 0.5 will play half of the animation cycle)</p>
+					</section>
+
+					<section>
+						<h2>Direction</h2>
+					</section>
+
+					<section>
+						<h2>Fill mode</h2>
+					</section>
+
+					<section>
+						<h2>Play state</h2>
+					</section>
+
+					<section>
+						<h2>Performance</h2>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Request animation frame</h2>
+						<p><a href="http://caniuse.com/#feat=requestanimationframe">Caniuse</a></p>
+						<p>Runs callback function with DOMHighResTimeStamp argument before the next repaint.</p>
+						<pre><code class="js" data-trim>
+var rAF = window.requestAnimationFrame;
+
+function step(timestamp) {
+	document.body.innerHTML = timestamp;
+	rAF(step);
+}
+
+rAF(step);
+						</code></pre>
+						<p>
+							<a href="https://gist.github.com/paulirish/1579671">Polyfill</a><br>
+							<a href="http://updates.html5rocks.com/2012/05/requestAnimationFrame-API-now-with-sub-millisecond-precision">About timestamp</a>
+						</p>
+					</section>
+					<section>
+						<h2>Performance</h2>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>transitionend event</h2>
+						<p class="align-left">Fired when a CSS transition has completed. In the case where a transition is removed before completion, such as if the transition-property is removed, then the event will not fire.</p>
+						<pre><code class="js" data-trim>
+var element = document.querySelector('.transition');
+
+function showMessage(e) {
+	console.log(e);
+}
+
+element.addEventListener("transitionend", showMessage);
+						</code></pre>
+					</section>
+				</section>
+
+
+
+
+			</div>
 		</div>
 
 		<script src="bower_components/reveal.js/lib/js/head.min.js"></script>
@@ -63,10 +233,10 @@
 				controls: true,
 				progress: true,
 				history: true,
-				center: true,
+				center: false,
 
-				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+				transition: 'linear',
+				backgroundTransition: 'fade',
 
 				// Parallax scrolling
 				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
