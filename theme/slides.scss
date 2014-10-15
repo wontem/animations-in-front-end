@@ -22,10 +22,31 @@ $headingTextTransform: uppercase;
 $selectionBackgroundColor: #FF5E99;
 $mainFontSize: 30px;
 
-.reveal h1 {
-    font-size: 1.75em;
-}
-
 // Theme template ------------------------------
 @import "../bower_components/reveal.js/css/theme/template/theme";
 // ---------------------------------------------
+
+.reveal {
+	h1 {
+		font-size: 1.6em;
+	}
+	h2 {
+		font-size: 1.4em;
+	}
+	h3 {
+		font-size: 1.2em;
+	}
+}
+
+.cols {
+	display: flex;
+	justify-content: space-between;
+
+	div {
+		flex: 1 0 0;
+	}
+}
+
+.align-left {
+	text-align: left;
+}

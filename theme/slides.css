@@ -1,8 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:700);
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic,700italic);
-.reveal h1 {
-  font-size: 1.75em; }
-
 /*********************************************
  * GLOBAL STYLES
  *********************************************/
@@ -132,5 +129,21 @@ body {
  *********************************************/
 .reveal .slide-number {
   color: #8dd792; }
+
+.reveal h1 {
+  font-size: 1.6em; }
+.reveal h2 {
+  font-size: 1.4em; }
+.reveal h3 {
+  font-size: 1.2em; }
+
+.cols {
+  display: flex;
+  justify-content: space-between; }
+  .cols div {
+    flex: 1 0 0; }
+
+.align-left {
+  text-align: left; }
 
 /*# sourceMappingURL=slides.css.map */
