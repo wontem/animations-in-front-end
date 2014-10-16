@@ -1,0 +1,134 @@
+html {
+  height: 100%;
+  overflow: hidden; }
+
+.cont {
+  position: absolute;
+  width: 40px;
+  height: 140px;
+  margin: auto;
+  -webkit-animation: rotate 10s linear infinite;
+          animation: rotate 10s linear infinite;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0; }
+
+.cont:nth-child(2) {
+  -webkit-animation: rotate 10s linear infinite;
+          animation: rotate 10s linear infinite;
+  -webkit-animation-delay: -5s;
+          animation-delay: -5s; }
+
+.cont:nth-child(3) {
+  -webkit-animation: rotate 10s linear infinite;
+          animation: rotate 10s linear infinite;
+  -webkit-animation-delay: -2.5s;
+          animation-delay: -2.5s; }
+
+.cont:nth-child(4) {
+  -webkit-animation: rotate 10s linear infinite;
+          animation: rotate 10s linear infinite;
+  -webkit-animation-delay: -7.5s;
+          animation-delay: -7.5s; }
+
+.a, .b, .c, .d {
+  width: 40px;
+  height: 40px;
+  position: absolute; }
+
+.a:after, .b:after, .c:after, .d:after {
+  display: block;
+  content: "";
+  -webkit-transform: scale(0.5);
+      -ms-transform: scale(0.5);
+          transform: scale(0.5);
+  width: 40px;
+  height: 40px;
+  border-radius: 100%; }
+
+.a {
+  -webkit-animation: move 2s ease-in-out infinite alternate, zIndex 4s ease-in-out infinite;
+          animation: move 2s ease-in-out infinite alternate, zIndex 4s ease-in-out infinite; }
+
+.b {
+  -webkit-animation: move 2s ease-in-out infinite alternate-reverse, zIndex 4s ease-in-out infinite reverse;
+          animation: move 2s ease-in-out infinite alternate-reverse, zIndex 4s ease-in-out infinite reverse; }
+
+.a:after {
+  background: #75c7f0;
+  -webkit-animation: zoom 2s ease-in-out infinite alternate;
+          animation: zoom 2s ease-in-out infinite alternate;
+  -webkit-animation-delay: -1s;
+          animation-delay: -1s; }
+
+.b:after {
+  background: #8152e0;
+  -webkit-animation: zoom 2s ease-in-out infinite alternate-reverse;
+          animation: zoom 2s ease-in-out infinite alternate-reverse;
+  -webkit-animation-delay: -1s;
+          animation-delay: -1s; }
+
+.c {
+  -webkit-animation: move 2s ease-in-out infinite alternate, zIndex 4s ease-in-out infinite;
+          animation: move 2s ease-in-out infinite alternate, zIndex 4s ease-in-out infinite;
+  -webkit-animation-delay: -1s, -1s;
+          animation-delay: -1s, -1s; }
+
+.d {
+  -webkit-animation: move 2s ease-in-out infinite alternate-reverse, zIndex 4s ease-in-out infinite reverse;
+          animation: move 2s ease-in-out infinite alternate-reverse, zIndex 4s ease-in-out infinite reverse;
+  -webkit-animation-delay: -1s, -1s;
+          animation-delay: -1s, -1s; }
+
+.c:after {
+  background: #e05252;
+  -webkit-animation: zoom 2s ease-in-out infinite alternate;
+          animation: zoom 2s ease-in-out infinite alternate;
+  -webkit-animation-delay: -2s;
+          animation-delay: -2s; }
+
+.d:after {
+  background: #f0f075;
+  -webkit-animation: zoom 2s ease-in-out infinite alternate-reverse;
+          animation: zoom 2s ease-in-out infinite alternate-reverse;
+  -webkit-animation-delay: -2s;
+          animation-delay: -2s; }
+
+@-webkit-keyframes move {
+  100% {
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px); } }
+
+@keyframes move {
+  100% {
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px); } }
+@-webkit-keyframes zoom {
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1); } }
+@keyframes zoom {
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1); } }
+@-webkit-keyframes zIndex {
+  25% {
+    z-index: 1; }
+  75% {
+    z-index: -1; } }
+@keyframes zIndex {
+  25% {
+    z-index: 1; }
+  75% {
+    z-index: -1; } }
+@-webkit-keyframes rotate {
+  to {
+    -webkit-transform: rotateZ(360deg);
+            transform: rotateZ(360deg); } }
+@keyframes rotate {
+  to {
+    -webkit-transform: rotateZ(360deg);
+            transform: rotateZ(360deg); } }
+
+/*# sourceMappingURL=style.css.map */
