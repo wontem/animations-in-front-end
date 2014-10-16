@@ -1,24 +1,18 @@
-doctype html
-html(lang="en")
-	head
-		meta(charset="UTF-8")
-		title= 'transition'
-		link(rel="stylesheet" href='style.css')
-	body
-		table
-			tr
-				td= 'none'
-				td
-					.elem
-			tr
-				td= 'backwards'
-				td
-					.elem
-			tr
-				td= 'forwards'
-				td
-					.elem
-			tr
-				td= 'both'
-				td
-					.elem
+include ../little-squares.jade
+	table
+		tr
+			td= 'none'
+			td
+				.elem
+		tr
+			td= 'backwards'
+			td
+				.elem
+		tr
+			td= 'forwards'
+			td
+				.elem
+		tr
+			td= 'both'
+			td
+				.elem
