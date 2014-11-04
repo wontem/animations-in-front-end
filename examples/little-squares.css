@@ -13,13 +13,12 @@ tr td {
   margin-bottom: 10px;
   vertical-align: middle;
   white-space: nowrap;
-  overflow: hidden; }
-  tr td:nth-child(1) {
-    padding: 10px 20px;
-    font-size: 1.5rem;
-    color: white;
-    font-family: monospace; }
-  tr td:nth-child(2) {
+  overflow: hidden;
+  font-size: 1.5rem;
+  color: white;
+  font-family: monospace;
+  padding: 10px 20px; }
+  tr td:last-child {
     width: 100%;
     padding: 10px 50px 10px 0; }
 

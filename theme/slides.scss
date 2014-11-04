@@ -1,6 +1,6 @@
 // Default mixins and settings -----------------
-@import "../bower_components/reveal.js/css/theme/template/mixins";
-@import "../bower_components/reveal.js/css/theme/template/settings";
+@import "../libs/reveal.js/css/theme/template/mixins";
+@import "../libs/reveal.js/css/theme/template/settings";
 // ---------------------------------------------
 
 
@@ -23,7 +23,7 @@ $selectionBackgroundColor: #FF5E99;
 $mainFontSize: 30px;
 
 // Theme template ------------------------------
-@import "../bower_components/reveal.js/css/theme/template/theme";
+@import "../libs/reveal.js/css/theme/template/theme";
 // ---------------------------------------------
 
 .reveal {
@@ -35,6 +35,44 @@ $mainFontSize: 30px;
 	}
 	h3 {
 		font-size: 1.2em;
+	}
+
+	table {
+		width: 100%;
+		margin-top: 1.5rem;
+		border-collapse: collapse;
+
+	}
+
+	tbody {
+		&:hover tr {
+			opacity: .1;
+
+			&:hover {
+				opacity: 1;
+			}
+		}
+	}
+
+	thead {
+		font-weight: bold;
+		background: darken( darkslateblue, 20% );
+		text-transform: uppercase;
+	}
+
+	tr {
+		transition: all .3s;
+	}
+
+	td {
+		text-align: left;
+		font-size: .8em;
+		padding: .2em .3em;
+		vertical-align: text-top;
+	}
+
+	tr:nth-child(2n) {
+		background: rgba( darkslateblue, .3 );
 	}
 }
 
@@ -49,4 +87,8 @@ $mainFontSize: 30px;
 
 .align-left {
 	text-align: left;
+}
+
+.codestyle {
+	font-family: monospace !important;
 }

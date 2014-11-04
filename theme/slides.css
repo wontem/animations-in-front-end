@@ -136,6 +136,27 @@ body {
   font-size: 1.4em; }
 .reveal h3 {
   font-size: 1.2em; }
+.reveal table {
+  width: 100%;
+  margin-top: 1.5rem;
+  border-collapse: collapse; }
+.reveal tbody:hover tr {
+  opacity: .1; }
+  .reveal tbody:hover tr:hover {
+    opacity: 1; }
+.reveal thead {
+  font-weight: bold;
+  background: #231e44;
+  text-transform: uppercase; }
+.reveal tr {
+  transition: all .3s; }
+.reveal td {
+  text-align: left;
+  font-size: .8em;
+  padding: .2em .3em;
+  vertical-align: text-top; }
+.reveal tr:nth-child(2n) {
+  background: rgba(72, 61, 139, 0.3); }
 
 .cols {
   display: flex;
@@ -145,5 +166,8 @@ body {
 
 .align-left {
   text-align: left; }
+
+.codestyle {
+  font-family: monospace !important; }
 
 /*# sourceMappingURL=slides.css.map */
