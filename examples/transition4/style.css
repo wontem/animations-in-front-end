@@ -1,3 +1,6 @@
+.elem {
+  transition-duration: 2s; }
+
 tr:nth-child(1) .elem {
   transition-delay: -1s; }
 

@@ -1,6 +1,9 @@
 html, body {
   height: 100%;
-  overflow: hidden; }
+  overflow: hidden;
+  font-size: 1.5rem;
+  color: white;
+  font-family: monospace; }
 
 table {
   width: 100%;
@@ -14,9 +17,6 @@ tr td {
   vertical-align: middle;
   white-space: nowrap;
   overflow: hidden;
-  font-size: 1.5rem;
-  color: white;
-  font-family: monospace;
   padding: 10px 20px; }
   tr td:last-child {
     width: 100%;
@@ -28,7 +28,7 @@ tr td {
   left: 0;
   transform: translateX(-100%);
   position: relative;
-  transition: 1s all;
+  transition: 1s all linear;
   display: inline-block; }
   .elem::after {
     content: "";
