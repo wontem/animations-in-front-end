@@ -2,7 +2,9 @@ tr .elem {
   -webkit-animation: move 2s linear infinite alternate paused;
           animation: move 2s linear infinite alternate paused; }
 tr td:first-child::after {
-  content: "paused"; }
+  content: "paused";
+  display: block;
+  width: 8rem; }
 tr:hover .elem {
   -webkit-animation-play-state: running;
           animation-play-state: running; }

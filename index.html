@@ -66,14 +66,14 @@
 
 				<section class="center">
 					<div class="cols">
-						<div>
+						<div class="fragment" data-fragment-index="1">
 							<h2>CSS</h2>
 							<ul>
 								<li>transition</li>
-								<li>keyframes</li>
+								<li>animation</li>
 							</ul>
 						</div>
-						<div>
+						<div class="fragment" data-fragment-index="2">
 							<h2>JS</h2>
 							<ul>
 								<li>requestAnimationFrame</li>
@@ -81,12 +81,12 @@
 								<!-- <li>animate</li> -->
 							</ul>
 						</div>
-						<!-- <div>
+						<div class="fragment" data-fragment-index="3">
 							<h2>SVG</h2>
 							<ul>
 								<li>SMIL</li>
 							</ul>
-						</div> -->
+						</div>
 					</div>
 				</section>
 
@@ -248,11 +248,29 @@
 					<section>
 						<h2>Timing functions</h2>
 						<p class="align-left">For keyframed animations, the timing function applies between keyframes rather than over the entire animation</p>
+						<pre><code class="css" data-trim>
+tbody:hover .elem {
+  animation: move 2s ease 1; }
+
+@keyframes move {
+  0% {
+    transform: translateX(-100%); }
+  25% {
+    transform: translateX(-75%); }
+  50% {
+    transform: translateX(-50%); }
+  75% {
+    transform: translateX(-25%); }
+  100% {
+    transform: translateX(0%); } }
+						</code></pre>
+						<iframe src="examples/animation1/index.html" frameborder="0" height="200" width="800"></iframe>
 					</section>
 
 					<section>
 						<h2>Iteration count</h2>
 						<p class="align-left">Number of iterations. Infinite or float (for example 0.5 will play half of the animation cycle)</p>
+						<iframe src="examples/animation2/index.html" frameborder="0" height="400" width="800"></iframe>
 					</section>
 
 					<section>
@@ -268,12 +286,12 @@ tbody:hover tr .elem {
 			animation: move 2s linear 1s;
 }
 						</code></pre>
-						<iframe src="examples/animation2/index.html" frameborder="0" height="400" width="800"></iframe>
+						<iframe src="examples/animation4/index.html" frameborder="0" height="400" width="800"></iframe>
 					</section>
 
 					<section>
 						<h2>Play state</h2>
-						<iframe src="examples/animation3/index.html" frameborder="0" height="400" width="800"></iframe>
+						<iframe src="examples/animation5/index.html" frameborder="0" height="400" width="800"></iframe>
 					</section>
 
 					<section>
