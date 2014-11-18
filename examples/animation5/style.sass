@@ -1,20 +1,17 @@
-tr
+tbody:hover tr
   .elem
-    animation: move 2s linear infinite alternate paused
-  td:first-child::after
-    content: 'paused'
-    display: block
-    width: 8rem
-
-  &:hover
-    .elem
-      animation-play-state: running
-    td:first-child::after
-      content: 'running'
-
+    animation: move 2s 2 ease-in
+  &:nth-child(1) .elem
+    animation-direction: normal
+  &:nth-child(2) .elem
+    animation-direction: reverse
+  &:nth-child(3) .elem
+    animation-direction: alternate
+  &:nth-child(4) .elem
+    animation-direction: alternate-reverse
 
 @keyframes move
   from
     transform: translateX(-100%)
   to
-    transform: translateX(0%)
+    transform: translateX(0)

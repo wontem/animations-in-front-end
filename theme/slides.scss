@@ -10,7 +10,7 @@
 
 
 // Override theme settings (see ../template/settings.scss)
-$backgroundColor: #111;
+$backgroundColor: #1A1A1A;
 
 $mainFont: 'Open Sans', sans-serif;
 $linkColor: #8dd792;
@@ -35,6 +35,15 @@ $mainFontSize: 30px;
 	}
 	h3 {
 		font-size: 1.2em;
+	}
+
+	pre {
+		box-shadow: none;
+
+		code {
+			padding: 15px 20px;
+			border-radius: 10px;
+		}
 	}
 
 	table {

@@ -15,10 +15,10 @@
 
 		<link rel="stylesheet" href="libs/reveal.js/css/reveal.min.css">
 		<link rel="stylesheet" href="theme/slides.css" id="theme">
-		<link rel="stylesheet" href="attachments/styles.css">
+		<!-- <link rel="stylesheet" href="attachments/styles.css"> -->
 
 		<!-- For syntax highlighting -->
-		<link rel="stylesheet" href="libs/reveal.js/lib/css/zenburn.css">
+		<link rel="stylesheet" href="theme/tomorrow-night-eighties.css">
 
 		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
 		<script>
@@ -76,15 +76,15 @@
 						<div class="fragment" data-fragment-index="2">
 							<h2>JS</h2>
 							<ul>
+								<li>events</li>
 								<li>requestAnimationFrame</li>
-								<li>transitionend event</li>
-								<!-- <li>animate</li> -->
+								<li><a href="http://updates.html5rocks.com/2014/05/Web-Animations---element-animate-is-now-in-Chrome-36">Web animations (Blink only)</a></li>
 							</ul>
 						</div>
 						<div class="fragment" data-fragment-index="3">
 							<h2>SVG</h2>
 							<ul>
-								<li>SMIL</li>
+								<li><a href="http://css-tricks.com/guide-svg-animations-smil/">SMIL (!IE)</a></li>
 							</ul>
 						</div>
 					</div>
@@ -274,10 +274,6 @@ tbody:hover .elem {
 					</section>
 
 					<section>
-						<h2>Direction</h2>
-					</section>
-
-					<section>
 						<h2>Fill mode</h2>
 						<p class="align-left">Specifies how a CSS animation should apply styles to its target before and after it is executing.</p>
 						<pre><code class="css" data-trim>
@@ -290,57 +286,87 @@ tbody:hover tr .elem {
 					</section>
 
 					<section>
-						<h2>Play state</h2>
+						<h2>Direction</h2>
+						<pre><code class="css" data-trim>
+tbody:hover tr .elem {
+	-webkit-animation: move 2s 2 ease-in
+			animation: move 2s 2 ease-in
+}
+						</code></pre>
 						<iframe src="examples/animation5/index.html" frameborder="0" height="400" width="800"></iframe>
 					</section>
 
 					<section>
-						<h2>Performance</h2>
+						<h2>Play state</h2>
+						<iframe src="examples/animation6/index.html" frameborder="0" height="400" width="800"></iframe>
 					</section>
+
+					<section>
+						<h2>Performance</h2>
+						<img src="http://www.html5rocks.com/en/tutorials/speed/high-performance-animations/cheap-operations.jpg" width="400" alt="">
+						<ul>
+							<li>Use translate() instead top/left positioning</li>
+							<li>Use translateZ(0) or translate3d(0, 0, 0) to force hardware acceleration</li>
+						</ul>
+						<p>
+							<a href="http://www.html5rocks.com/en/tutorials/speed/high-performance-animations/">High Performance Animations</a><br>
+							<a href="http://www.paulirish.com/2012/why-moving-elements-with-translate-is-better-than-posabs-topleft/">Traslate performanse</a>
+						</p>
+					</section>
+				</section>
+
+
+
+				<section class="center">
+					<div class="cols">
+						<div>
+							<h2><a href="https://developer.mozilla.org/en-US/docs/Web/API/TransitionEvent">TransitionEvent</a></h2>
+							<ul>
+								<li>transitionend</li>
+							</ul>
+						</div>
+						<div>
+							<h2><a href="https://developer.mozilla.org/en-US/docs/Web/API/AnimationEvent">AnimationEvent</a></h2>
+							<ul>
+								<li>animationend</li>
+								<li>animationiteration</li>
+								<li>animationstart</li>
+							</ul>
+						</div>
+					</div>
 				</section>
 
 				<section>
 					<section>
 						<h2>Request animation frame</h2>
 						<p><a href="http://caniuse.com/#feat=requestanimationframe">Caniuse</a></p>
-						<p>Runs callback function with DOMHighResTimeStamp argument before the next repaint.</p>
-						<pre><code class="js" data-trim>
-var rAF = window.requestAnimationFrame;
-
+						<p>Runs callback function with before the next repaint.</p>
+						<pre><code class="javascript" data-trim>
+var request;
 function step(timestamp) {
-	document.body.innerHTML = timestamp;
-	rAF(step);
+    document.body.innerHTML = timestamp;
+    request = requestAnimationFrame(step);
 }
+request = requestAnimationFrame(step);
 
-rAF(step);
+setTimeout(function(){
+    cancelAnimationFrame(request);
+}, 1000);
 						</code></pre>
 						<p>
-							<a href="https://gist.github.com/paulirish/1579671">Polyfill</a><br>
-							<a href="http://updates.html5rocks.com/2012/05/requestAnimationFrame-API-now-with-sub-millisecond-precision">About timestamp</a>
+							<a href="http://www.paulirish.com/2011/requestanimationframe-for-smart-animating/">requestAnimationFrame for Smart Animating</a>
 						</p>
 					</section>
 
 					<section>
-						<h2>Cancel animation frame</h2>
-					</section>
-
-					<section>
-						<h2>Performance</h2>
-					</section>
-				</section>
-				<section>
-					<section>
-						<h2>transitionend event</h2>
-						<p class="align-left">Fired when a CSS transition has completed. In the case where a transition is removed before completion, such as if the transition-property is removed, then the event will not fire.</p>
-						<pre><code class="js" data-trim>
-var element = document.querySelector('.transition');
-
-function showMessage(e) {
-	console.log(e);
-}
-
-element.addEventListener("transitionend", showMessage);
-						</code></pre>
+						<h2>Why?</h2>
+						<div>
+							<ul>
+								<li>60fps</li>
+								<li>Don't call unwanted repaint unlike setInterval</li>
+								<li>Running the animation loop in a tab that’s not visible, the browser won’t keep it running</li>
+							</ul>
+						</div>
 					</section>
 				</section>
 
