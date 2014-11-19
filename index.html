@@ -129,6 +129,39 @@
 						<iframe src="examples/transitionExample/index.html" frameborder="0" height="300" width="600"></iframe>
 					</section>
 
+					<section>
+						<h2>How?</h2>
+						<pre><code class="css" data-trim>
+.elem {
+    transition: opacity 3s 1s;
+}
+.elem {
+    transition-property: opacity;
+    transition-duration: 3s;
+    transition-delay: 1s;
+}
+
+.elem {
+    transition: transform .3s, opacity 3s 1s;
+}
+.elem {
+    transition-property: transform, opacity;
+    transition-duration: .3s, 3s;
+    transition-delay: initial, 1s;
+}
+						</code></pre>
+					</section>
+
+					<section>
+						<h2>Timing Functions</h2>
+						<p>Cubic bezier curve</p>
+						<iframe src="examples/transition3/index.html" frameborder="0" height="400" width="800"></iframe>
+						<p>
+							<a href="http://codepen.io/wontem/full/CdyEG/">Cubic bezier</a><br>
+							<a href="http://cubic-bezier.com/">Cubic bezier by Lea Verou</a><br>
+							<a href="http://www.smashingmagazine.com/2014/04/15/understanding-css-timing-functions/">CSS Timing functions</a><br>
+						</p>
+					</section>
 
 					<section>
 						<h2>Timing Functions</h2>
@@ -139,19 +172,8 @@
 					<section data-background="#2f4f4f">
 						<h2>Timing Functions</h2>
 						<p>Steps</p>
+						<p><a href="http://media.mediatemple.netdna-cdn.com/wp-content/uploads/2014/04/12-steps-start-end.jpg">Explaining</a></p>
 						<iframe src="examples/transition2/index.html" frameborder="0" height="500" width="600"></iframe>
-					</section>
-
-					<section>
-						<h2>Timing Functions</h2>
-						<p>Cubic bezier curve</p>
-						<iframe src="examples/transition3/index.html" frameborder="0" height="400" width="800"></iframe>
-						<p>
-							<a href="http://wontem.pe.hu/bezier/">Explaining</a><br>
-							<a href="http://cubic-bezier.com/">Cubic bezier</a><br>
-							<a href="http://www.smashingmagazine.com/2014/04/15/understanding-css-timing-functions/">CSS Timing functions</a><br>
-							<a href="http://www.robertpenner.com/easing/">Easing functions</a>
-						</p>
 					</section>
 
 					<section>
@@ -218,6 +240,29 @@
 								</tr>
 							</tbody>
 						</table>
+					</section>
+
+					<section>
+						<h2>How?</h2>
+						<pre><code class="css" data-trim>
+.elem {
+    animation: some-madness 3s infinite;
+}
+.elem {
+    animation-name: some-madness;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+.elem {
+    animation: move .3s, hide 2s 1s;
+}
+.elem {
+    animation-name: move, hide;
+    animation-duration: .3s, 2s;
+    animation-delay: initial, 1s;
+}
+						</code></pre>
 					</section>
 
 					<section>
@@ -313,7 +358,7 @@ tbody:hover tr .elem {
 					</ul>
 					<p>
 						<a href="http://www.html5rocks.com/en/tutorials/speed/high-performance-animations/">High Performance Animations</a><br>
-						<a href="http://www.paulirish.com/2012/why-moving-elements-with-translate-is-better-than-posabs-topleft/">Traslate performanse</a>
+						<a href="http://www.paulirish.com/2012/why-moving-elements-with-translate-is-better-than-posabs-topleft/">Translate performanse</a>
 					</p>
 				</section>
 
@@ -334,6 +379,8 @@ tbody:hover tr .elem {
 							</ul>
 						</div>
 					</div>
+					<br><br>
+					<p>Vendor prefix and camelCase may require. For example webkitAnimationEnd</p>
 				</section>
 
 				<section>
