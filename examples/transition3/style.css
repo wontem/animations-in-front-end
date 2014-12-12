@@ -5,6 +5,6 @@ tr:nth-child(3) .elem {
   transition-timing-function: cubic-bezier(0.5, -0.5, 0.5, 1.5); }
 
 table:hover .elem {
-  transform: translateX(0); }
+  transform: translateX(0) translateZ(0); }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,5 +1,5 @@
 table:hover .elem {
-  transform: translateX(0); }
+  transform: translateX(0) translateZ(0); }
 
 div[anim="linear"] {
   transition-timing-function: linear; }

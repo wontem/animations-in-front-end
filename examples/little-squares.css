@@ -26,9 +26,11 @@ tr td {
   width: 100%;
   height: 40px;
   left: 0;
-  transform: translateX(-100%);
+  -webkit-transform: translateX(-100%) translateZ(0);
+          transform: translateX(-100%) translateZ(0);
   position: relative;
-  transition: 1s all linear;
+  -webkit-transition: 1s all linear;
+          transition: 1s all linear;
   display: inline-block; }
   .elem::after {
     content: "";
