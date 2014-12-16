@@ -130,6 +130,13 @@ body {
 .reveal .slide-number {
   color: #8dd792; }
 
+.reveal i {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
 .reveal h1 {
   font-size: 1.6em; }
 .reveal h2 {
