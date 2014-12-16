@@ -1,45 +1,43 @@
-html
-    //background: #111
-    height: 100%
-    overflow: hidden
+.intro-wrapper
+    position: relative
 
-.cont
-    position: absolute
-    width: 40px
-    height: 140px
-    margin: auto
-    animation: rotate 10s linear infinite
-    top: 0
-    left: 0
-    bottom: 0
-    right: 0
+    .cont
+        position: absolute
+        width: 40px
+        height: 140px
+        margin: auto
+        animation: rotate 10s linear infinite
+        top: 0
+        left: 0
+        bottom: 0
+        right: 0
 
-.cont:nth-child(2)
-    animation: rotate 10s linear infinite
-    animation-delay: -5s
+    .cont:nth-child(2)
+        animation: rotate 10s linear infinite
+        animation-delay: -5s
 
 
-.cont:nth-child(3)
-    animation: rotate 10s linear infinite
-    animation-delay: -2.5s
+    .cont:nth-child(3)
+        animation: rotate 10s linear infinite
+        animation-delay: -2.5s
 
 
-.cont:nth-child(4)
-    animation: rotate 10s linear infinite
-    animation-delay: -7.5s
+    .cont:nth-child(4)
+        animation: rotate 10s linear infinite
+        animation-delay: -7.5s
 
-.a, .b, .c, .d
-    width: 40px
-    height: 40px
-    position: absolute
+    .a, .b, .c, .d
+        width: 40px
+        height: 40px
+        position: absolute
 
-.a:after, .b:after, .c:after, .d:after
-    display: block
-    content: ''
-    transform: scale(0.5)
-    width: 40px
-    height: 40px
-    border-radius: 100%
+    .a:after, .b:after, .c:after, .d:after
+        display: block
+        content: ''
+        transform: scale(0.5)
+        width: 40px
+        height: 40px
+        border-radius: 100%
 
 
 
@@ -53,23 +51,21 @@ html
 
 
 
-.a
-    animation: move 2s ease-in-out infinite alternate, zIndex 4s ease-in-out infinite
+    .a
+        animation: move 2s ease-in-out infinite alternate, zIndex 4s ease-in-out infinite
 
-.b
-    animation: move 2s ease-in-out infinite alternate-reverse, zIndex 4s ease-in-out infinite reverse
+    .b
+        animation: move 2s ease-in-out infinite alternate-reverse, zIndex 4s ease-in-out infinite reverse
 
-.a:after
-    background: hsl(200, 80%, 70%)
-    animation: zoom 2s ease-in-out infinite alternate
-    animation-delay: -1s
+    .a:after
+        background: hsl(200, 80%, 70%)
+        animation: zoom 2s ease-in-out infinite alternate
+        animation-delay: -1s
 
-.b:after
-    background: hsl(260, 70%, 60%)
-    animation: zoom 2s ease-in-out infinite alternate-reverse
-    animation-delay: -1s
-
-
+    .b:after
+        background: hsl(260, 70%, 60%)
+        animation: zoom 2s ease-in-out infinite alternate-reverse
+        animation-delay: -1s
 
 
 
@@ -77,23 +73,25 @@ html
 
 
 
-.c
-    animation: move 2s ease-in-out infinite alternate, zIndex 4s ease-in-out infinite
-    animation-delay: -1s, -1s
 
-.d
-    animation: move 2s ease-in-out infinite alternate-reverse, zIndex 4s ease-in-out infinite reverse
-    animation-delay: -1s, -1s
 
-.c:after
-    background: hsl(0, 70%, 60%)
-    animation: zoom 2s ease-in-out infinite alternate
-    animation-delay: -2s
+    .c
+        animation: move 2s ease-in-out infinite alternate, zIndex 4s ease-in-out infinite
+        animation-delay: -1s, -1s
 
-.d:after
-    background: hsl(60, 80%, 70%)
-    animation: zoom 2s ease-in-out infinite alternate-reverse
-    animation-delay: -2s
+    .d
+        animation: move 2s ease-in-out infinite alternate-reverse, zIndex 4s ease-in-out infinite reverse
+        animation-delay: -1s, -1s
+
+    .c:after
+        background: hsl(0, 70%, 60%)
+        animation: zoom 2s ease-in-out infinite alternate
+        animation-delay: -2s
+
+    .d:after
+        background: hsl(60, 80%, 70%)
+        animation: zoom 2s ease-in-out infinite alternate-reverse
+        animation-delay: -2s
 
 
 
