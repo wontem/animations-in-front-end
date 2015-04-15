@@ -10,10 +10,12 @@
 
 
 // Override theme settings (see ../template/settings.scss)
-$backgroundColor: #1A1A1A;
+$backgroundColor: #fff;
+$mainColor: #111;
+$headingColor: #222;
 
 $mainFont: 'Open Sans', sans-serif;
-$linkColor: #8dd792;
+$linkColor: crimson;
 $linkColorHover: lighten( $linkColor, 20% );
 $headingFont: 'Roboto', Impact, sans-serif;
 $headingTextShadow: none;
@@ -21,6 +23,8 @@ $headingLetterSpacing: 0.02em;
 $headingTextTransform: uppercase;
 $selectionBackgroundColor: #FF5E99;
 $mainFontSize: 30px;
+$tableColor: darkslateblue;
+$tableHeadColor: #fff;
 
 // Theme template ------------------------------
 @import "../libs/reveal.js/css/theme/template/theme";
@@ -62,6 +66,11 @@ $mainFontSize: 30px;
 
 	}
 
+	section img {
+		border: none;
+		box-shadow: none;
+	}
+
 	tbody {
 		&:hover tr {
 			opacity: .1;
@@ -73,8 +82,9 @@ $mainFontSize: 30px;
 	}
 
 	thead {
+		color: $tableHeadColor;
 		font-weight: bold;
-		background: darken( darkslateblue, 20% );
+		background: darken( $tableColor, 20% );
 		text-transform: uppercase;
 	}
 
@@ -90,7 +100,7 @@ $mainFontSize: 30px;
 	}
 
 	tr:nth-child(2n) {
-		background: rgba( darkslateblue, .3 );
+		background: rgba( $tableColor, .3 );
 	}
 }
 

@@ -4,15 +4,15 @@
  * GLOBAL STYLES
  *********************************************/
 body {
-  background: #1A1A1A;
-  background-color: #1A1A1A; }
+  background: #fff;
+  background-color: #fff; }
 
 .reveal {
   font-family: "Open Sans", sans-serif;
   font-size: 30px;
   font-weight: normal;
   letter-spacing: -0.02em;
-  color: #eee; }
+  color: #111; }
 
 ::selection {
   color: #fff;
@@ -29,7 +29,7 @@ body {
 .reveal h5,
 .reveal h6 {
   margin: 0 0 20px 0;
-  color: #eee;
+  color: #222;
   font-family: "Roboto", Impact, sans-serif;
   line-height: 0.9em;
   letter-spacing: 0.02em;
@@ -43,7 +43,7 @@ body {
  * LINKS
  *********************************************/
 .reveal a:not(.image) {
-  color: #8dd792;
+  color: crimson;
   text-decoration: none;
   -webkit-transition: color .15s ease;
   -moz-transition: color .15s ease;
@@ -52,13 +52,13 @@ body {
   transition: color .15s ease; }
 
 .reveal a:not(.image):hover {
-  color: #d9f1da;
+  color: #f16581;
   text-shadow: none;
   border: none; }
 
 .reveal .roll span:after {
   color: #fff;
-  background: #54c35c; }
+  background: #960e29; }
 
 /*********************************************
  * IMAGES
@@ -66,7 +66,7 @@ body {
 .reveal section img {
   margin: 15px 0px;
   background: rgba(255, 255, 255, 0.12);
-  border: 4px solid #eee;
+  border: 4px solid #111;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
   -webkit-transition: all .2s linear;
   -moz-transition: all .2s linear;
@@ -76,7 +76,7 @@ body {
 
 .reveal a:hover img {
   background: rgba(255, 255, 255, 0.2);
-  border-color: #8dd792;
+  border-color: crimson;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.55); }
 
 /*********************************************
@@ -84,31 +84,31 @@ body {
  *********************************************/
 .reveal .controls div.navigate-left,
 .reveal .controls div.navigate-left.enabled {
-  border-right-color: #8dd792; }
+  border-right-color: crimson; }
 
 .reveal .controls div.navigate-right,
 .reveal .controls div.navigate-right.enabled {
-  border-left-color: #8dd792; }
+  border-left-color: crimson; }
 
 .reveal .controls div.navigate-up,
 .reveal .controls div.navigate-up.enabled {
-  border-bottom-color: #8dd792; }
+  border-bottom-color: crimson; }
 
 .reveal .controls div.navigate-down,
 .reveal .controls div.navigate-down.enabled {
-  border-top-color: #8dd792; }
+  border-top-color: crimson; }
 
 .reveal .controls div.navigate-left.enabled:hover {
-  border-right-color: #d9f1da; }
+  border-right-color: #f16581; }
 
 .reveal .controls div.navigate-right.enabled:hover {
-  border-left-color: #d9f1da; }
+  border-left-color: #f16581; }
 
 .reveal .controls div.navigate-up.enabled:hover {
-  border-bottom-color: #d9f1da; }
+  border-bottom-color: #f16581; }
 
 .reveal .controls div.navigate-down.enabled:hover {
-  border-top-color: #d9f1da; }
+  border-top-color: #f16581; }
 
 /*********************************************
  * PROGRESS BAR
@@ -117,7 +117,7 @@ body {
   background: rgba(0, 0, 0, 0.2); }
 
 .reveal .progress span {
-  background: #8dd792;
+  background: crimson;
   -webkit-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
   -moz-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
   -ms-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
@@ -128,7 +128,7 @@ body {
  * SLIDE NUMBER
  *********************************************/
 .reveal .slide-number {
-  color: #8dd792; }
+  color: crimson; }
 
 .reveal i {
   display: inline-block;
@@ -152,11 +152,15 @@ body {
   width: 100%;
   margin-top: 1.5rem;
   border-collapse: collapse; }
+.reveal section img {
+  border: none;
+  box-shadow: none; }
 .reveal tbody:hover tr {
   opacity: .1; }
   .reveal tbody:hover tr:hover {
     opacity: 1; }
 .reveal thead {
+  color: #fff;
   font-weight: bold;
   background: #231e44;
   text-transform: uppercase; }
